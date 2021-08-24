@@ -27,6 +27,20 @@ class TodoAdapter(
         )
     }
 
+    fun addToDo(todo: Todo) {
+        todos.add(todo)
+        // notify the adapter that a change has been made
+        notifyItemInserted(todos.size -1)
+    }
+
+    fun deleteTodo() {
+        todos.removeAll { todo ->
+            todo.isChecked
+        }
+        // this updates the whole list
+        notifyDataSetChanged()
+    }
+
     // toggle checked view state
     private fun toggleStrikeThrough(tvTodoTitle: TextView, isChecked: Boolean) {
         if (isChecked) {

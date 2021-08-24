@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,21 +8,37 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTodoItems"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="295dp"
+        android:layout_height="555dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.549" />
 
     <EditText
         android:id="@+id/etTodoItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
         android:hint="@string/etTodoItem"
+        app:layout_constraintBottom_toTopOf="@+id/rvTodoItems"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797" />
+
+    <Button
+        android:id="@+id/btnDeleteTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="@string/btnDeleteTodo"
+        app:layout_anchor="@+id/btnAddTodo"
+        app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAddTodo"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvTodoItems"
+        app:layout_constraintVertical_bias="0.483" />
 
     <Button
         android:id="@+id/btnAddTodo"
@@ -31,15 +47,9 @@
         android:text="@string/btnAddTodo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDeleteTodo"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnDeleteTodo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnDeleteTodo"
-        app:layout_anchor="@+id/etTodoItem"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/rvTodoItems"
+        app:layout_constraintVertical_bias="0.483" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
