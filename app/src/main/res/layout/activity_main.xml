@@ -19,7 +19,7 @@
         android:id="@+id/etTodoItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter Todo Title"
+        android:hint="@string/etTodoItem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAddTodo"
         app:layout_constraintStart_toStartOf="parent" />
@@ -28,7 +28,8 @@
         android:id="@+id/btnAddTodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Todo"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btnAddTodo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDeleteTodo" />
 
@@ -36,7 +37,7 @@
         android:id="@+id/btnDeleteTodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete done"
+        android:text="@string/btnDeleteTodo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
