@@ -1,5 +1,6 @@
 package com.example.todoapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +26,8 @@ class LoginPage : AppCompatActivity() {
 
             // your code to validate the user_name and password combination
             // and verify the same
-
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
     }
 }
