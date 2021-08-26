@@ -21,13 +21,19 @@ class LoginPage : AppCompatActivity() {
         btnSubmit.setOnClickListener {
             val username = etUsername.text
             val password = etPassword.text
-            Toast.makeText(this@LoginPage, username, Toast.LENGTH_LONG).show()
+
+            val errorText = "Please enter a valid Username"
+
             println(password)
 
-            // your code to validate the user_name and password combination
-            // and verify the same
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
+            if (username.length > 5) {
+                Toast.makeText(this@LoginPage, username, Toast.LENGTH_LONG).show()
+                val intent = Intent(this, MainActivity2::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this@LoginPage, errorText, Toast.LENGTH_LONG).show()
+
+            }
         }
     }
 }
