@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-kotlin-todo-dev-95113-authRole",
+      "UnauthRoleArn": "arn:aws:iam::091278452310:role/amplify-kotlin-todo-dev-95113-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::091278452310:role/amplify-kotlin-todo-dev-95113-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-kotlin-todo-dev-95113-deployment",
+      "UnauthRoleName": "amplify-kotlin-todo-dev-95113-unauthRole",
+      "StackName": "amplify-kotlin-todo-dev-95113",
+      "StackId": "arn:aws:cloudformation:eu-west-2:091278452310:stack/amplify-kotlin-todo-dev-95113/9d92dad0-0581-11ec-a95b-06b03d104c62",
+      "AmplifyAppId": "d9ekigczea8j9"
+    },
+    "categories": {
+      "auth": {
+        "kotlintodoeb741a50": {}
+      }
+    }
+  }
+}

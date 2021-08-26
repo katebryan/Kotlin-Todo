@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">TodoApp</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="btnSubmit">Submit</string>
 
     <string name="tvTodoTitle">Example</string>
     <string name="etTodoItem">Enter a todo…</string>

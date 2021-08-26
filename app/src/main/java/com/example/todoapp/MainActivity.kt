@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // this is the lifecycle hook that's called on component render
         super.onCreate(savedInstanceState)
+
         // this is where the styling is pulled in - activity_main is the equivalent of a .css file
         setContentView(R.layout.activity_main)
         todoAdapter = TodoAdapter(mutableListOf())
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         btnAddTodo.setOnClickListener {
             val todoTitle = etTodoItem.text.toString()
-            if(todoTitle.isNotEmpty()) {
+            if (todoTitle.isNotEmpty()) {
                 val todo = Todo(todoTitle)
                 todoAdapter.addToDo(todo)
                 etTodoItem.text.clear()
@@ -35,3 +36,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
