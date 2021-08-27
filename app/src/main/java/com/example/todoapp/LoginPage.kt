@@ -2,8 +2,12 @@ package com.example.todoapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.amplifyframework.AmplifyException
+import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin
+import com.amplifyframework.core.Amplify
 
 
 class LoginPage : AppCompatActivity() {
@@ -11,6 +15,18 @@ class LoginPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_page)
+
+        // setting up Amplify
+        try {
+            Amplify.addPlugin(AWSCognitoAuthPlugin())
+            Amplify.configure(applicationContext)
+            Amplify.Auth.fetchAuthSession(
+                { Log.i("AmplifyQuickstart", "Auth session = $it") },
+                { Log.e("AmplifyQuickstart", "Failed to fetch auth session", error("Amplify failed to fetch auth sesh")) }
+            )
+        } catch (error: AmplifyException) {
+            Log.e("MyAmplifyApp", "Could not initialize Amplify", error)
+        }
 
         // get reference to all views
         val etUsername = findViewById<EditText>(R.id.et_user_name)
