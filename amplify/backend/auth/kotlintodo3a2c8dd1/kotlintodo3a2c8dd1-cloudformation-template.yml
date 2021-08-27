@@ -149,7 +149,7 @@ Resources:
   # Created to allow the UserPool SMS Config to publish via the Simple Notification Service during MFA Process
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, 'kotlineb741a50_sns-role', !Join ['',[ 'sns', 'eb741a50', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, 'kotlin3a2c8dd1_sns-role', !Join ['',[ 'sns', '3a2c8dd1', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -161,10 +161,10 @@ Resources:
               - "sts:AssumeRole"
             Condition:
               StringEquals:
-                sts:ExternalId: kotlineb741a50_role_external_id
+                sts:ExternalId: kotlin3a2c8dd1_role_external_id
       Policies:
         -
-          PolicyName: kotlineb741a50-sns-policy
+          PolicyName: kotlin3a2c8dd1-sns-policy
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
@@ -221,7 +221,7 @@ Resources:
       SmsAuthenticationMessage: !Ref smsAuthenticationMessage
       SmsConfiguration:
         SnsCallerArn: !GetAtt SNSRole.Arn
-        ExternalId: kotlineb741a50_role_external_id
+        ExternalId: kotlin3a2c8dd1_role_external_id
     
   
   UserPoolClientWeb:
@@ -229,7 +229,7 @@ Resources:
   # Depends on UserPool for ID reference
     Type: "AWS::Cognito::UserPoolClient"
     Properties:
-      ClientName: kotlineb741a50_app_clientWeb
+      ClientName: kotlin3a2c8dd1_app_clientWeb
       
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
       UserPoolId: !Ref UserPool
@@ -239,7 +239,7 @@ Resources:
   # Depends on UserPool for ID reference
     Type: "AWS::Cognito::UserPoolClient"
     Properties:
-      ClientName: kotlineb741a50_app_client
+      ClientName: kotlin3a2c8dd1_app_client
       
       GenerateSecret: !Ref userpoolClientGenerateSecret
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
@@ -250,7 +250,7 @@ Resources:
   # Created to execute Lambda which gets userpool app client config values
     Type: 'AWS::IAM::Role'
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',['upClientLambdaRole', 'eb741a50', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',['upClientLambdaRole', '3a2c8dd1', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -304,7 +304,7 @@ Resources:
   # Marked as depending on UserPoolClientRole for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: kotlineb741a50_userpoolclient_lambda_iam_policy
+      PolicyName: kotlin3a2c8dd1_userpoolclient_lambda_iam_policy
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -321,7 +321,7 @@ Resources:
   # Marked as depending on UserPoolClientLambdaPolicy for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: kotlineb741a50_userpoolclient_lambda_log_policy
+      PolicyName: kotlin3a2c8dd1_userpoolclient_lambda_log_policy
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -361,7 +361,7 @@ Resources:
   # Always created
     Type: AWS::Cognito::IdentityPool
     Properties:
-      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'kotlintodoeb741a50_identitypool_eb741a50', !Join ['',['kotlintodoeb741a50_identitypool_eb741a50', '__', !Ref env]]]
+      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'kotlintodo3a2c8dd1_identitypool_3a2c8dd1', !Join ['',['kotlintodo3a2c8dd1_identitypool_3a2c8dd1', '__', !Ref env]]]
       
       CognitoIdentityProviders:
         - ClientId:  !Ref UserPoolClient

@@ -28,7 +28,7 @@ class LoginPage : AppCompatActivity() {
 
             if (username.length > 5) {
                 Toast.makeText(this@LoginPage, username, Toast.LENGTH_LONG).show()
-                val intent = Intent(this, MainActivity2::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this@LoginPage, errorText, Toast.LENGTH_LONG).show()
