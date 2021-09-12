@@ -3,8 +3,9 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fbb4d4359f0accba8e401f52b1bd9f96/transformed/jetified-aws-android-sdk-core-2.26.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cf983d45f8181941af0561ee25c4f1a5/transformed/jetified-aws-android-sdk-core-2.26.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cf983d45f8181941af0561ee25c4f1a5/transformed/jetified-aws-android-sdk-core-2.26.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cf983d45f8181941af0561ee25c4f1a5/transformed/jetified-aws-android-sdk-core-2.26.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/514d38c8195b2dbbb3b083963e62f37b/transformed/jetified-aws-android-sdk-core-2.26.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/514d38c8195b2dbbb3b083963e62f37b/transformed/jetified-aws-android-sdk-core-2.26.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/514d38c8195b2dbbb3b083963e62f37b/transformed/jetified-aws-android-sdk-core-2.26.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

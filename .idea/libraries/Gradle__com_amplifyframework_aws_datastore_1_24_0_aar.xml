@@ -3,8 +3,9 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2e7c924bf2d8d6aa6613815c9c000429/transformed/jetified-aws-datastore-1.24.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05e956d6af5db92bfb7ebe475d8bfd8e/transformed/jetified-aws-datastore-1.24.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05e956d6af5db92bfb7ebe475d8bfd8e/transformed/jetified-aws-datastore-1.24.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/05e956d6af5db92bfb7ebe475d8bfd8e/transformed/jetified-aws-datastore-1.24.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/09c262aca0877bd1cb783f259362acbc/transformed/jetified-aws-datastore-1.24.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/09c262aca0877bd1cb783f259362acbc/transformed/jetified-aws-datastore-1.24.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/09c262aca0877bd1cb783f259362acbc/transformed/jetified-aws-datastore-1.24.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

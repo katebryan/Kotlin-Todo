@@ -4,14 +4,32 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
+open class TodoList {
+    private var arrayList: MutableList<Todo> = mutableListOf<Todo>()
+
+    fun addItemToList(todoItem: String) {
+        arrayList.add(Todo(todoItem, false))
+    }
+
+    fun getTodoList(): List<Todo> {
+        return arrayList
+    }
+}
+
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun emptyListIsEmpty() {
+        val list = TodoList()
+        val result = list.getTodoList()
+        assertEquals(0, result.size)
     }
+
+    @Test
+    fun onAddItem_listHasOneItem() {
+        val list = TodoList()
+        list.addItemToList("dave")
+        val result = list.getTodoList()
+        assertEquals(1, result.size)
+    }
+
 }

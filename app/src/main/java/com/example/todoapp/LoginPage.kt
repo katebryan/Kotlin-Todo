@@ -24,23 +24,12 @@ class LoginPage : AppCompatActivity() {
             Amplify.configure(applicationContext)
             Amplify.Auth.fetchAuthSession(
                 { Log.i("AmplifyQuickstart", "Auth session = $it") },
-                { Log.e("AmplifyQuickstart", "Failed to fetch auth session", error("Amplify failed to fetch auth sesh")) }
+                { Log.e("AmplifyQuickstart", "Failed to fetch auth session") }
             )
         } catch (error: AmplifyException) {
             Log.e("MyAmplifyApp", "Could not initialize Amplify", error)
         }
 
-//        Amplify.Auth.confirmSignUp(
-//            "username", "0000",
-//            { result ->
-//                if (result.isSignUpComplete) {
-//                    Log.i("AuthQuickstart", "Confirm signUp succeeded")
-//                } else {
-//                    Log.i("AuthQuickstart","Confirm sign up not complete")
-//                }
-//            },
-//            { Log.e("AuthQuickstart", "Failed to confirm sign up", it) }
-//        )
 
         // get reference to all views
         val etEmail = findViewById<EditText>(R.id.et_email)
@@ -60,7 +49,7 @@ class LoginPage : AppCompatActivity() {
 
             if (email.length > 5) {
                 Toast.makeText(this@LoginPage, email, Toast.LENGTH_LONG).show()
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, Test::class.java)
                 startActivity(intent)
                 val options = AuthSignUpOptions.builder()
                     .userAttribute(AuthUserAttributeKey.email(), email.toString())
@@ -72,7 +61,6 @@ class LoginPage : AppCompatActivity() {
 
             } else {
                 Toast.makeText(this@LoginPage, errorText, Toast.LENGTH_LONG).show()
-
             }
         }
     }

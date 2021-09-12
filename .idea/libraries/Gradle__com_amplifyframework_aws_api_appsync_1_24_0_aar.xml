@@ -2,9 +2,10 @@
   <library name="Gradle: com.amplifyframework:aws-api-appsync:1.24.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f0708c9c4bf7e47f46755bb704ce9f39/transformed/jetified-aws-api-appsync-1.24.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/328e3b97465f8106d0c4a491b9dc86c8/transformed/jetified-aws-api-appsync-1.24.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/328e3b97465f8106d0c4a491b9dc86c8/transformed/jetified-aws-api-appsync-1.24.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/328e3b97465f8106d0c4a491b9dc86c8/transformed/jetified-aws-api-appsync-1.24.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c02c1a25cb9e6d3f283673967a9a8c5e/transformed/jetified-aws-api-appsync-1.24.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c02c1a25cb9e6d3f283673967a9a8c5e/transformed/jetified-aws-api-appsync-1.24.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c02c1a25cb9e6d3f283673967a9a8c5e/transformed/jetified-aws-api-appsync-1.24.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
